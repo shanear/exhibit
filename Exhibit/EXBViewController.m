@@ -9,10 +9,12 @@
 #import <ESTBeaconManager.h>
 
 #import "EXBViewController.h"
+#import "EXBBeaconService.h"
 
 @interface EXBViewController () <ESTBeaconManagerDelegate>
 @property (nonatomic, strong) ESTBeaconManager* beaconManager;
 @property (nonatomic, strong) ESTBeaconRegion *beaconRegion;
+@property (nonatomic, strong) EXBBeaconService *beaconService;
 @end
 
 @implementation EXBViewController
@@ -29,6 +31,7 @@
                                                             identifier: @"EstimoteSampleRegion"];
     self.beaconRegion.notifyEntryStateOnDisplay = true;
     
+    _beaconService = [[EXBBeaconService alloc] init];
     [self.beaconManager startRangingBeaconsInRegion:self.beaconRegion];
 }
 
@@ -36,7 +39,8 @@
      didRangeBeacons:(NSArray *)beacons
             inRegion:(ESTBeaconRegion *)region
 {
-    NSLog([NSString stringWithFormat:@"We're looking at %d beacons", [beacons count]]);
+    //NSLog([NSString stringWithFormat:@"We're looking at %d beacons", [beacons count]]);
+    [self.beaconService processBeacons:beacons];
 }
 
 - (void)didReceiveMemoryWarning

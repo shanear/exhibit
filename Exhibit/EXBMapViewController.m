@@ -6,12 +6,19 @@
 //  Copyright (c) 2014 Happy Hour Devs. All rights reserved.
 //
 
+#import <ESTBeaconManager.h>
+#import "EXBBeaconService.h"
+#import "EXBExhibitService.h"
 #import "EXBMapViewController.h"
 #import "EXBDetailsViewController.h"
 
-@interface EXBMapViewController ()
+@interface EXBMapViewController () <ESTBeaconManagerDelegate>
 
 @property (nonatomic, strong) EXBDetailsViewController *detailsVC;
+@property (nonatomic, strong) ESTBeaconManager* beaconManager;
+@property (nonatomic, strong) ESTBeaconRegion *beaconRegion;
+@property (nonatomic, strong) EXBBeaconService *beaconService;
+@property (nonatomic, strong) EXBExhibitService *exhibitService;
 
 @end
 
@@ -29,7 +36,18 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+
+    self.beaconManager = [[ESTBeaconManager alloc] init];
+    self.beaconManager.delegate = self;
+    self.beaconManager.avoidUnknownStateBeacons = YES;
+    
+    self.beaconRegion = [[ESTBeaconRegion alloc] initWithProximityUUID: ESTIMOTE_PROXIMITY_UUID
+                                                            identifier: @"EstimoteSampleRegion"];
+    self.beaconRegion.notifyEntryStateOnDisplay = true;
+    
+    _exhibitService = [[EXBExhibitService alloc] init];
+    _beaconService = [[EXBBeaconService alloc] initWithExhibitService: self.exhibitService];
+    [self.beaconManager startRangingBeaconsInRegion:self.beaconRegion];
 }
 
 - (void)didReceiveMemoryWarning
@@ -95,6 +113,25 @@
     } completion:^(BOOL finished) {
         //self.detailsVC = nil;
     }];
+}
+
+-(void)beaconManager:(ESTBeaconManager *)manager
+     didRangeBeacons:(NSArray *)beacons
+            inRegion:(ESTBeaconRegion *)region
+{
+    [self.beaconService processBeacons:beacons];
+    
+    if(self.exhibitService.exhibitChanged) {
+        if(self.exhibitService.currentExhibit) {
+            [self displayDetailsView];
+        }
+        else {
+            [self shrinkDetailsView];
+        }
+        
+        self.exhibitService.exhibitChanged = false;
+        
+    }
 }
          
 

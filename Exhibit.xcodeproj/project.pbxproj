@@ -35,6 +35,9 @@
 		CCE91CC618B8357000721F97 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCE91CC518B8357000721F97 /* CoreLocation.framework */; };
 		CCE91CC818B8357A00721F97 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCE91CC718B8357A00721F97 /* SystemConfiguration.framework */; };
 		CCE91CCA18B8358C00721F97 /* libEstimoteSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CCE91CC918B8358B00721F97 /* libEstimoteSDK.a */; };
+		CCE91CD018B83B0E00721F97 /* EXBBeaconService.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE91CCF18B83B0E00721F97 /* EXBBeaconService.m */; };
+		CCE91CD318B846F200721F97 /* EXBExhibitService.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE91CD218B846F200721F97 /* EXBExhibitService.m */; };
+		CCE91CDC18B914DF00721F97 /* EXBExhibit.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE91CDB18B914DF00721F97 /* EXBExhibit.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +86,12 @@
 		CCE91CC518B8357000721F97 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		CCE91CC718B8357A00721F97 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		CCE91CC918B8358B00721F97 /* libEstimoteSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libEstimoteSDK.a; path = EstimoteSDK/libEstimoteSDK.a; sourceTree = "<group>"; };
+		CCE91CCE18B83B0E00721F97 /* EXBBeaconService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXBBeaconService.h; sourceTree = "<group>"; };
+		CCE91CCF18B83B0E00721F97 /* EXBBeaconService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXBBeaconService.m; sourceTree = "<group>"; };
+		CCE91CD118B846F200721F97 /* EXBExhibitService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXBExhibitService.h; sourceTree = "<group>"; };
+		CCE91CD218B846F200721F97 /* EXBExhibitService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXBExhibitService.m; sourceTree = "<group>"; };
+		CCE91CDA18B914DF00721F97 /* EXBExhibit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXBExhibit.h; sourceTree = "<group>"; };
+		CCE91CDB18B914DF00721F97 /* EXBExhibit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXBExhibit.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +186,12 @@
 				CCE91CA418B8348B00721F97 /* EXBViewController.m */,
 				CCE91CA618B8348B00721F97 /* Images.xcassets */,
 				CCE91C9518B8348B00721F97 /* Supporting Files */,
+				CCE91CCE18B83B0E00721F97 /* EXBBeaconService.h */,
+				CCE91CCF18B83B0E00721F97 /* EXBBeaconService.m */,
+				CCE91CD118B846F200721F97 /* EXBExhibitService.h */,
+				CCE91CD218B846F200721F97 /* EXBExhibitService.m */,
+				CCE91CDA18B914DF00721F97 /* EXBExhibit.h */,
+				CCE91CDB18B914DF00721F97 /* EXBExhibit.m */,
 			);
 			path = Exhibit;
 			sourceTree = "<group>";
@@ -314,8 +329,11 @@
 				495142CB18B87439005A19F3 /* EXBDetailsViewController.m in Sources */,
 				CCE91CA518B8348B00721F97 /* EXBViewController.m in Sources */,
 				495142B818B85ED0005A19F3 /* EXBMapViewController.m in Sources */,
+				CCE91CD018B83B0E00721F97 /* EXBBeaconService.m in Sources */,
+				CCE91CDC18B914DF00721F97 /* EXBExhibit.m in Sources */,
 				CCE91C9F18B8348B00721F97 /* EXBAppDelegate.m in Sources */,
 				CCE91C9B18B8348B00721F97 /* main.m in Sources */,
+				CCE91CD318B846F200721F97 /* EXBExhibitService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
