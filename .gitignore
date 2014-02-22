@@ -1,0 +1,10 @@
+# OS X file manager cache
+.DS_Store
+
+# Xcode user data
+Exhibit.xcodeproj/xcuserdata/
+Exhibit.xcodeproj/project.xcworkspace/xcuserdata/
+
+# CocoaPods
+Pods
+

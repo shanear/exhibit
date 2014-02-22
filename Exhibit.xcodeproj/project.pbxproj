@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		495142B318B8553A005A19F3 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 495142B218B8553A005A19F3 /* MainStoryboard.storyboard */; };
+		495142B818B85ED0005A19F3 /* EXBMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 495142B718B85ED0005A19F3 /* EXBMapViewController.m */; };
 		CCE91C8F18B8348B00721F97 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCE91C8E18B8348B00721F97 /* Foundation.framework */; };
 		CCE91C9118B8348B00721F97 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCE91C9018B8348B00721F97 /* CoreGraphics.framework */; };
 		CCE91C9318B8348B00721F97 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCE91C9218B8348B00721F97 /* UIKit.framework */; };
 		CCE91C9918B8348B00721F97 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CCE91C9718B8348B00721F97 /* InfoPlist.strings */; };
 		CCE91C9B18B8348B00721F97 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE91C9A18B8348B00721F97 /* main.m */; };
 		CCE91C9F18B8348B00721F97 /* EXBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE91C9E18B8348B00721F97 /* EXBAppDelegate.m */; };
-		CCE91CA218B8348B00721F97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCE91CA018B8348B00721F97 /* Main.storyboard */; };
 		CCE91CA518B8348B00721F97 /* EXBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE91CA418B8348B00721F97 /* EXBViewController.m */; };
 		CCE91CA718B8348B00721F97 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCE91CA618B8348B00721F97 /* Images.xcassets */; };
 		CCE91CAE18B8348B00721F97 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCE91CAD18B8348B00721F97 /* XCTest.framework */; };
@@ -38,6 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		495142B218B8553A005A19F3 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		495142B618B85ED0005A19F3 /* EXBMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXBMapViewController.h; sourceTree = "<group>"; };
+		495142B718B85ED0005A19F3 /* EXBMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXBMapViewController.m; sourceTree = "<group>"; };
 		CCE91C8B18B8348B00721F97 /* Exhibit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Exhibit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCE91C8E18B8348B00721F97 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CCE91C9018B8348B00721F97 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -48,7 +52,6 @@
 		CCE91C9C18B8348B00721F97 /* Exhibit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Exhibit-Prefix.pch"; sourceTree = "<group>"; };
 		CCE91C9D18B8348B00721F97 /* EXBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EXBAppDelegate.h; sourceTree = "<group>"; };
 		CCE91C9E18B8348B00721F97 /* EXBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EXBAppDelegate.m; sourceTree = "<group>"; };
-		CCE91CA118B8348B00721F97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CCE91CA318B8348B00721F97 /* EXBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EXBViewController.h; sourceTree = "<group>"; };
 		CCE91CA418B8348B00721F97 /* EXBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EXBViewController.m; sourceTree = "<group>"; };
 		CCE91CA618B8348B00721F97 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -128,9 +131,11 @@
 		CCE91C9418B8348B00721F97 /* Exhibit */ = {
 			isa = PBXGroup;
 			children = (
+				495142B218B8553A005A19F3 /* MainStoryboard.storyboard */,
+				495142B618B85ED0005A19F3 /* EXBMapViewController.h */,
+				495142B718B85ED0005A19F3 /* EXBMapViewController.m */,
 				CCE91C9D18B8348B00721F97 /* EXBAppDelegate.h */,
 				CCE91C9E18B8348B00721F97 /* EXBAppDelegate.m */,
-				CCE91CA018B8348B00721F97 /* Main.storyboard */,
 				CCE91CA318B8348B00721F97 /* EXBViewController.h */,
 				CCE91CA418B8348B00721F97 /* EXBViewController.m */,
 				CCE91CA618B8348B00721F97 /* Images.xcassets */,
@@ -250,7 +255,7 @@
 			files = (
 				CCE91CA718B8348B00721F97 /* Images.xcassets in Resources */,
 				CCE91C9918B8348B00721F97 /* InfoPlist.strings in Resources */,
-				CCE91CA218B8348B00721F97 /* Main.storyboard in Resources */,
+				495142B318B8553A005A19F3 /* MainStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCE91CA518B8348B00721F97 /* EXBViewController.m in Sources */,
+				495142B818B85ED0005A19F3 /* EXBMapViewController.m in Sources */,
 				CCE91C9F18B8348B00721F97 /* EXBAppDelegate.m in Sources */,
 				CCE91C9B18B8348B00721F97 /* main.m in Sources */,
 			);
@@ -300,14 +306,6 @@
 				CCE91C9818B8348B00721F97 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		CCE91CA018B8348B00721F97 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CCE91CA118B8348B00721F97 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		CCE91CB618B8348B00721F97 /* InfoPlist.strings */ = {
@@ -504,6 +502,7 @@
 				CCE91CBF18B8348B00721F97 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CCE91CC018B8348B00721F97 /* Build configuration list for PBXNativeTarget "ExhibitTests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +511,7 @@
 				CCE91CC218B8348B00721F97 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
