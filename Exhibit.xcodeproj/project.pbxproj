@@ -21,6 +21,10 @@
 		CCE91CB018B8348B00721F97 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCE91C9218B8348B00721F97 /* UIKit.framework */; };
 		CCE91CB818B8348B00721F97 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CCE91CB618B8348B00721F97 /* InfoPlist.strings */; };
 		CCE91CBA18B8348B00721F97 /* ExhibitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE91CB918B8348B00721F97 /* ExhibitTests.m */; };
+		CCE91CC418B8356800721F97 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCE91CC318B8356800721F97 /* CoreBluetooth.framework */; };
+		CCE91CC618B8357000721F97 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCE91CC518B8357000721F97 /* CoreLocation.framework */; };
+		CCE91CC818B8357A00721F97 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCE91CC718B8357A00721F97 /* SystemConfiguration.framework */; };
+		CCE91CCA18B8358C00721F97 /* libEstimoteSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CCE91CC918B8358B00721F97 /* libEstimoteSDK.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,10 @@
 		CCE91CB518B8348B00721F97 /* ExhibitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ExhibitTests-Info.plist"; sourceTree = "<group>"; };
 		CCE91CB718B8348B00721F97 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CCE91CB918B8348B00721F97 /* ExhibitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExhibitTests.m; sourceTree = "<group>"; };
+		CCE91CC318B8356800721F97 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		CCE91CC518B8357000721F97 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		CCE91CC718B8357A00721F97 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		CCE91CC918B8358B00721F97 /* libEstimoteSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libEstimoteSDK.a; path = EstimoteSDK/libEstimoteSDK.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +68,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCE91CCA18B8358C00721F97 /* libEstimoteSDK.a in Frameworks */,
+				CCE91CC818B8357A00721F97 /* SystemConfiguration.framework in Frameworks */,
+				CCE91CC618B8357000721F97 /* CoreLocation.framework in Frameworks */,
+				CCE91CC418B8356800721F97 /* CoreBluetooth.framework in Frameworks */,
 				CCE91C9118B8348B00721F97 /* CoreGraphics.framework in Frameworks */,
 				CCE91C9318B8348B00721F97 /* UIKit.framework in Frameworks */,
 				CCE91C8F18B8348B00721F97 /* Foundation.framework in Frameworks */,
@@ -101,6 +113,10 @@
 		CCE91C8D18B8348B00721F97 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CCE91CC918B8358B00721F97 /* libEstimoteSDK.a */,
+				CCE91CC718B8357A00721F97 /* SystemConfiguration.framework */,
+				CCE91CC518B8357000721F97 /* CoreLocation.framework */,
+				CCE91CC318B8356800721F97 /* CoreBluetooth.framework */,
 				CCE91C8E18B8348B00721F97 /* Foundation.framework */,
 				CCE91C9018B8348B00721F97 /* CoreGraphics.framework */,
 				CCE91C9218B8348B00721F97 /* UIKit.framework */,
@@ -200,6 +216,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Happy Hour Devs";
 				TargetAttributes = {
+					CCE91C8A18B8348B00721F97 = {
+						DevelopmentTeam = S57V9PD3V6;
+					};
 					CCE91CAB18B8348B00721F97 = {
 						TestTargetID = CCE91C8A18B8348B00721F97;
 					};
@@ -379,10 +398,22 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Exhibit/Exhibit-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/EstimoteSDK/Headers",
+				);
 				INFOPLIST_FILE = "Exhibit/Exhibit-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/thoughtworker/Dropbox/Projects/ios/Exhibit/EstimoteSDK,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -392,10 +423,22 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Exhibit/Exhibit-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/EstimoteSDK/Headers",
+				);
 				INFOPLIST_FILE = "Exhibit/Exhibit-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/thoughtworker/Dropbox/Projects/ios/Exhibit/EstimoteSDK,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
