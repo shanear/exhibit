@@ -19,10 +19,14 @@
 @property (nonatomic, strong) ESTBeaconRegion *beaconRegion;
 @property (nonatomic, strong) EXBBeaconService *beaconService;
 @property (nonatomic, strong) EXBExhibitService *exhibitService;
+@property (weak, nonatomic) IBOutlet UIScrollView *mapScrollView;
+@property (weak, nonatomic) IBOutlet UIImageView *mapImageView;
+@property (nonatomic, strong) NSDictionary *exhibitData;
 
 @end
 
 @implementation EXBMapViewController
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -55,6 +59,12 @@
                                                          action:@selector(beaconDetected:)];
     [longPressRecognizer setNumberOfTouchesRequired:2];
     [self.view addGestureRecognizer:longPressRecognizer];
+}
+
+- (void)viewDidLayoutSubviews {
+    // Setup scrollView
+    self.mapImageView.frame = CGRectMake(0, 0, self.mapImageView.image.size.width, self.mapImageView.image.size.height);
+    self.mapScrollView.contentSize = self.mapImageView.image.size;
 }
 
 - (void)didReceiveMemoryWarning
@@ -146,6 +156,17 @@
         
     }
 }
-         
+
+# pragma mark - UIScrollViewDelegate
+
+- (UIView *) viewForZoomingInScrollView:(UIScrollView *)scrollView {
+    // return which subview we want to zoom
+    return self.mapImageView;
+}
+
+- (void) scrollViewDidEndZooming:(UIScrollView *)scrollView withView:(UIView *)view atScale:(CGFloat)scale {
+    self.mapScrollView.contentSize = CGSizeMake(self.mapImageView.image.size.width * scale, self.mapImageView.image.size.height * scale);
+}
+
 
 @end

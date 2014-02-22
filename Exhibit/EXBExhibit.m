@@ -10,11 +10,13 @@
 
 @implementation EXBExhibit
 
--(id)initWithId:(NSString*)id name:(NSString*)name
+@synthesize exhibitId, name, mapCoords;
+
+-(id)initWithId:(NSString*)anId name:(NSString*)aName
 {
     self = [super init];
-    _id = id;
-    _name = name;
+    self.exhibitId = anId;
+    self.name = aName;
     return self;
 }
 

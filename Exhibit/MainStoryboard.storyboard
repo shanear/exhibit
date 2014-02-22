@@ -20,18 +20,6 @@
                                 <rect key="frame" x="-13" y="219" width="347" height="349"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="parmigianino_thumb" translatesAutoresizingMaskIntoConstraints="NO" id="YEK-z1-VeT">
-                                <rect key="frame" x="26" y="273" width="43" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="impressionist_thumb" translatesAutoresizingMaskIntoConstraints="NO" id="h6I-Cl-G7i">
-                                <rect key="frame" x="253" y="231" width="43" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="matisse_thumb" translatesAutoresizingMaskIntoConstraints="NO" id="Svv-g4-q3l">
-                                <rect key="frame" x="139" y="131" width="43" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Legion of Honor" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e8j-Es-TGw">
                                 <rect key="frame" x="76" y="529" width="168" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -39,14 +27,39 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fbj-7I-qaF">
-                                <rect key="frame" x="46" y="20" width="240" height="240"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" minimumZoomScale="0.20000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="n9D-aC-oOy">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="400"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="floorplan2" translatesAutoresizingMaskIntoConstraints="NO" id="BcC-0I-iaU">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="400"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="parmigianino_thumb" translatesAutoresizingMaskIntoConstraints="NO" id="YEK-z1-VeT">
+                                        <rect key="frame" x="138" y="179" width="43" height="43"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="impressionist_thumb" translatesAutoresizingMaskIntoConstraints="NO" id="h6I-Cl-G7i">
+                                        <rect key="frame" x="138" y="179" width="43" height="43"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="matisse_thumb" translatesAutoresizingMaskIntoConstraints="NO" id="Svv-g4-q3l">
+                                        <rect key="frame" x="269" y="328" width="43" height="43"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <connections>
+                                    <outlet property="delegate" destination="cTV-hl-WWH" id="pFQ-Wd-xhO"/>
+                                </connections>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="mapImageView" destination="BcC-0I-iaU" id="C9L-YG-yNN"/>
+                        <outlet property="mapScrollView" destination="n9D-aC-oOy" id="yTj-vL-zHc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Maf-Ij-AIq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -97,16 +110,18 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.50631483249999998" blue="0.053092048109999998" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="closeButton" destination="wSj-3E-HQ2" id="etM-65-LCx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hfd-Vb-2nY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="167" y="2"/>
+            <point key="canvasLocation" x="167" y="0.0"/>
         </scene>
     </scenes>
     <resources>
+        <image name="floorplan2" width="1980" height="1478"/>
         <image name="impressionist_thumb" width="248" height="248"/>
         <image name="legionofhonor" width="2233" height="2103"/>
         <image name="matisse_thumb" width="216" height="216"/>

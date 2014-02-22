@@ -10,9 +10,10 @@
 
 @interface EXBExhibit : NSObject
 
--(id)initWithId:(NSString*)id name:(NSString*)name;
+-(id)initWithId:(NSString*)anId name:(NSString*)aName;
 
-@property (nonatomic) NSString* id;
+@property (nonatomic) NSString* exhibitId;
 @property (nonatomic) NSString* name;
+@property (nonatomic) CGPoint* mapCoords;
 
 @end
