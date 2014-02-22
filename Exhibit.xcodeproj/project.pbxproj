@@ -9,6 +9,14 @@
 /* Begin PBXBuildFile section */
 		495142B318B8553A005A19F3 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 495142B218B8553A005A19F3 /* MainStoryboard.storyboard */; };
 		495142B818B85ED0005A19F3 /* EXBMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 495142B718B85ED0005A19F3 /* EXBMapViewController.m */; };
+		495142BA18B8709F005A19F3 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 495142B918B8709F005A19F3 /* Parse.framework */; };
+		495142BC18B870D9005A19F3 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 495142BB18B870D9005A19F3 /* AudioToolbox.framework */; };
+		495142BE18B870E0005A19F3 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 495142BD18B870E0005A19F3 /* CFNetwork.framework */; };
+		495142C018B870ED005A19F3 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 495142BF18B870ED005A19F3 /* libz.dylib */; };
+		495142C218B870FF005A19F3 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 495142C118B870FF005A19F3 /* MobileCoreServices.framework */; };
+		495142C418B87105005A19F3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 495142C318B87105005A19F3 /* QuartzCore.framework */; };
+		495142C618B8710C005A19F3 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 495142C518B8710C005A19F3 /* Security.framework */; };
+		495142C818B87114005A19F3 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 495142C718B87114005A19F3 /* StoreKit.framework */; };
 		CCE91C8F18B8348B00721F97 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCE91C8E18B8348B00721F97 /* Foundation.framework */; };
 		CCE91C9118B8348B00721F97 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCE91C9018B8348B00721F97 /* CoreGraphics.framework */; };
 		CCE91C9318B8348B00721F97 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCE91C9218B8348B00721F97 /* UIKit.framework */; };
@@ -42,6 +50,14 @@
 		495142B218B8553A005A19F3 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		495142B618B85ED0005A19F3 /* EXBMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXBMapViewController.h; sourceTree = "<group>"; };
 		495142B718B85ED0005A19F3 /* EXBMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXBMapViewController.m; sourceTree = "<group>"; };
+		495142B918B8709F005A19F3 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		495142BB18B870D9005A19F3 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		495142BD18B870E0005A19F3 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		495142BF18B870ED005A19F3 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		495142C118B870FF005A19F3 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		495142C318B87105005A19F3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		495142C518B8710C005A19F3 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		495142C718B87114005A19F3 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		CCE91C8B18B8348B00721F97 /* Exhibit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Exhibit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCE91C8E18B8348B00721F97 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CCE91C9018B8348B00721F97 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -71,12 +87,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				495142C818B87114005A19F3 /* StoreKit.framework in Frameworks */,
+				495142C618B8710C005A19F3 /* Security.framework in Frameworks */,
+				495142C418B87105005A19F3 /* QuartzCore.framework in Frameworks */,
+				495142C218B870FF005A19F3 /* MobileCoreServices.framework in Frameworks */,
+				495142C018B870ED005A19F3 /* libz.dylib in Frameworks */,
+				495142BE18B870E0005A19F3 /* CFNetwork.framework in Frameworks */,
+				495142BC18B870D9005A19F3 /* AudioToolbox.framework in Frameworks */,
 				CCE91CCA18B8358C00721F97 /* libEstimoteSDK.a in Frameworks */,
 				CCE91CC818B8357A00721F97 /* SystemConfiguration.framework in Frameworks */,
 				CCE91CC618B8357000721F97 /* CoreLocation.framework in Frameworks */,
 				CCE91CC418B8356800721F97 /* CoreBluetooth.framework in Frameworks */,
 				CCE91C9118B8348B00721F97 /* CoreGraphics.framework in Frameworks */,
 				CCE91C9318B8348B00721F97 /* UIKit.framework in Frameworks */,
+				495142BA18B8709F005A19F3 /* Parse.framework in Frameworks */,
 				CCE91C8F18B8348B00721F97 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -116,6 +140,14 @@
 		CCE91C8D18B8348B00721F97 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				495142C718B87114005A19F3 /* StoreKit.framework */,
+				495142C518B8710C005A19F3 /* Security.framework */,
+				495142C318B87105005A19F3 /* QuartzCore.framework */,
+				495142C118B870FF005A19F3 /* MobileCoreServices.framework */,
+				495142BF18B870ED005A19F3 /* libz.dylib */,
+				495142BD18B870E0005A19F3 /* CFNetwork.framework */,
+				495142BB18B870D9005A19F3 /* AudioToolbox.framework */,
+				495142B918B8709F005A19F3 /* Parse.framework */,
 				CCE91CC918B8358B00721F97 /* libEstimoteSDK.a */,
 				CCE91CC718B8357A00721F97 /* SystemConfiguration.framework */,
 				CCE91CC518B8357000721F97 /* CoreLocation.framework */,
@@ -398,6 +430,11 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/andrew/Dev/exhibit,
+					"$(SRCROOT)/**",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Exhibit/Exhibit-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -409,6 +446,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/thoughtworker/Dropbox/Projects/ios/Exhibit/EstimoteSDK,
+					"$(SRCROOT)/**",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -423,6 +461,11 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/andrew/Dev/exhibit,
+					"$(SRCROOT)/**",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Exhibit/Exhibit-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -434,6 +477,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/thoughtworker/Dropbox/Projects/ios/Exhibit/EstimoteSDK,
+					"$(SRCROOT)/**",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
