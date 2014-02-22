@@ -32,10 +32,10 @@
 -(NSString*)getClosestBeaconId:(NSArray*)beacons
 {
     for(ESTBeacon* beacon in beacons) {
-        if(beacon.rssi > -90) {
-            //if([self.exhibitService exhibitForBeaconId:[self generateBeaconId:beacon]]) {
+        if(beacon.rssi > -85) {
+            if([self.exhibitService exhibitForBeaconId:[self generateBeaconId:beacon]]) {
                 return [self generateBeaconId:beacon];
-            //}
+            }
         }
     }
     
@@ -49,7 +49,7 @@
     if([self.closestBeaconId isEqualToString:closestBeaconId]) {
         self.streak += 1;
         
-        if(self.streak > 5) {
+        if(self.streak > 3) {
             [self.exhibitService enteredBeaconId:self.closestBeaconId];
         }
     }

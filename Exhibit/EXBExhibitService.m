@@ -28,8 +28,12 @@
 
 -(void)enteredBeaconId:(NSString *)beaconId
 {
-    self.currentExhibit = [self exhibitForBeaconId:beaconId];
-    self.exhibitChanged = true;
+    
+    EXBExhibit* newExhibit = [self exhibitForBeaconId:beaconId];
+    if(self.currentExhibit != newExhibit) {
+        self.currentExhibit = newExhibit;
+        self.exhibitChanged = true;
+    }
 }
 
 @end
