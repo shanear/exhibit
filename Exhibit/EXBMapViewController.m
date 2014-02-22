@@ -23,6 +23,7 @@
 @property (weak, nonatomic) IBOutlet UIScrollView *mapScrollView;
 @property (weak, nonatomic) IBOutlet UIImageView *mapImageView;
 @property (nonatomic, strong) NSDictionary *exhibitData;
+@property BOOL longPressWasDetected;
 
 // Exhibit buttons
 @property (weak, nonatomic) IBOutlet EXBExhibitButton *parmigianinoButton;
@@ -48,6 +49,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.longPressWasDetected = NO;
 
     self.beaconManager = [[ESTBeaconManager alloc] init];
     self.beaconManager.delegate = self;
@@ -64,15 +67,15 @@
     // Setup two-finger press for artificial beacon trigger
     UILongPressGestureRecognizer *longPressRecognizer = [[UILongPressGestureRecognizer alloc]
                                                          initWithTarget:self
-                                                         action:@selector(beaconDetected:)];
+                                                         action:@selector(longPressDetected)];
     [longPressRecognizer setNumberOfTouchesRequired:2];
     [self.view addGestureRecognizer:longPressRecognizer];
+    
+    self.mapImageView.frame = CGRectMake(0, 0, self.mapImageView.image.size.width, self.mapImageView.image.size.height);
 }
 
 - (void)viewDidLayoutSubviews {
     // Setup scrollView
-    self.mapImageView.frame = CGRectMake(0, 0, self.mapImageView.image.size.width, self.mapImageView.image.size.height);
-    
     self.mapScrollView.contentSize = CGSizeMake(self.mapImageView.image.size.width + 200, self.mapImageView.image.size.height + 200);
 }
 
@@ -82,14 +85,23 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)beaconDetected:(id)sender {
+- (void) longPressDetected {
+    if (!self.longPressWasDetected) {
+        [self beaconDetected];
+        self.longPressWasDetected = YES;
+    }
+}
+
+- (IBAction)beaconDetected {
     [self displayDetailsView];
-    [self scrollToExhibit:@"matisse"];
 }
 
 - (void) scrollToExhibit:(NSString *)exhibitId {
     if ([exhibitId isEqualToString:@"matisse"]) {
         CGPoint coords = matisseButton.frame.origin;
+        coords.x -= ([[UIScreen mainScreen] bounds].size.width / 2) - 22.5;
+        coords.y -= ([[UIScreen mainScreen] bounds].size.height / 2) - 22.5;
+        
         [self.mapScrollView setContentOffset:coords animated:YES];
     }
 }
@@ -123,8 +135,10 @@
     [UIView animateWithDuration:0.25f animations: ^{
         detailsView.frame = elevatedFrame;
     } completion:^(BOOL finished) {
-        CGRect finalFrame = self.detailsVC.view.frame;
-        finalFrame.origin.y += 20;
+        //CGRect finalFrame = self.detailsVC.view.frame;
+        //finalFrame.origin.y += 20;
+        
+        [self scrollToExhibit:@"matisse"];
     }];
 }
 
