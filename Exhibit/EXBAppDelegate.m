@@ -13,9 +13,11 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Parse initialization
-    
     [Parse setApplicationId:@"4kkiZIaA0RopmD3xso7PthtiYbIYudBDAJIhItEl"
                   clientKey:@"1mpo17RG6excIJvOnHEgTPQxy7TmQWu6qwonXo7Q"];
+    
+    // Hide the status bar
+    [UIApplication sharedApplication].statusBarHidden = YES;
     
     return YES;
 }

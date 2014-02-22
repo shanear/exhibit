@@ -48,6 +48,13 @@
     _exhibitService = [[EXBExhibitService alloc] init];
     _beaconService = [[EXBBeaconService alloc] initWithExhibitService: self.exhibitService];
     [self.beaconManager startRangingBeaconsInRegion:self.beaconRegion];
+    
+    // Setup two-finger press for artificial beacon trigger
+    UILongPressGestureRecognizer *longPressRecognizer = [[UILongPressGestureRecognizer alloc]
+                                                         initWithTarget:self
+                                                         action:@selector(beaconDetected:)];
+    [longPressRecognizer setNumberOfTouchesRequired:2];
+    [self.view addGestureRecognizer:longPressRecognizer];
 }
 
 - (void)didReceiveMemoryWarning
@@ -57,12 +64,18 @@
 }
 
 - (IBAction)beaconDetected:(id)sender {
-    if (((UIButton *)sender).tag == 0) {
-        [self displayDetailsView];
-    }
+    [self displayDetailsView];
 }
 
 - (void) displayDetailsView {
+    
+    // If we alreayd have a detailsVC being displayed, remove it
+    if (self.detailsVC) {
+        [self.detailsVC.view removeFromSuperview];
+        self.detailsVC = nil;
+    }
+    
+    // Create a new detailsVC
     self.detailsVC = [[UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil] instantiateViewControllerWithIdentifier:@"EXBDetailsViewController"];
     
     self.detailsVC.mapDelegate = self;
