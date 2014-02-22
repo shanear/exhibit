@@ -10,4 +10,7 @@
 
 @interface EXBMapViewController : UIViewController
 
+- (void) expandDetailsView;
+- (void) shrinkDetailsView;
+
 @end
