@@ -31,18 +31,30 @@
                                         <rect key="frame" x="100" y="100" width="320" height="568"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="parmigianino_thumb" translatesAutoresizingMaskIntoConstraints="NO" id="YEK-z1-VeT">
-                                        <rect key="frame" x="138" y="179" width="43" height="43"/>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2av-9Q-vdb" customClass="EXBExhibitButton">
+                                        <rect key="frame" x="509" y="370" width="45" height="45"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="impressionist_thumb" translatesAutoresizingMaskIntoConstraints="NO" id="h6I-Cl-G7i">
-                                        <rect key="frame" x="138" y="179" width="43" height="43"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" image="matisse_thumb">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ft1-wm-qPo" customClass="EXBExhibitButton">
+                                        <rect key="frame" x="146" y="228" width="45" height="45"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="matisse_thumb" translatesAutoresizingMaskIntoConstraints="NO" id="Svv-g4-q3l">
-                                        <rect key="frame" x="269" y="328" width="43" height="43"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" image="parmigianino_thumb">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UVG-JF-dBu" customClass="EXBExhibitButton">
+                                        <rect key="frame" x="146" y="512" width="45" height="45"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" image="impressionist_thumb">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
                                 </subviews>
                                 <connections>
                                     <outlet property="delegate" destination="cTV-hl-WWH" id="pFQ-Wd-xhO"/>
@@ -53,8 +65,11 @@
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <connections>
+                        <outlet property="impressionistButton" destination="UVG-JF-dBu" id="n86-yd-VKW"/>
                         <outlet property="mapImageView" destination="BcC-0I-iaU" id="C9L-YG-yNN"/>
                         <outlet property="mapScrollView" destination="n9D-aC-oOy" id="yTj-vL-zHc"/>
+                        <outlet property="matisseButton" destination="2av-9Q-vdb" id="hGd-qJ-f9x"/>
+                        <outlet property="parmigianinoButton" destination="Ft1-wm-qPo" id="I1n-EZ-STs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Maf-Ij-AIq" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -6,7 +6,6 @@
 //  Copyright (c) 2014 Happy Hour Devs. All rights reserved.
 //
 
-//#import <QuartzCore/QuartzCore.h>
 #import "EXBDetailsViewController.h"
 
 @interface EXBDetailsViewController ()

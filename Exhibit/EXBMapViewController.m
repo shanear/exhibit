@@ -7,6 +7,7 @@
 //
 
 #import <ESTBeaconManager.h>
+#import "EXBExhibitButton.h"
 #import "EXBBeaconService.h"
 #import "EXBExhibitService.h"
 #import "EXBMapViewController.h"
@@ -23,9 +24,16 @@
 @property (weak, nonatomic) IBOutlet UIImageView *mapImageView;
 @property (nonatomic, strong) NSDictionary *exhibitData;
 
+// Exhibit buttons
+@property (weak, nonatomic) IBOutlet EXBExhibitButton *parmigianinoButton;
+@property (weak, nonatomic) IBOutlet EXBExhibitButton *matisseButton;
+@property (weak, nonatomic) IBOutlet EXBExhibitButton *impressionistButton;
+
 @end
 
 @implementation EXBMapViewController
+
+@synthesize matisseButton, parmigianinoButton, impressionistButton;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -76,11 +84,19 @@
 
 - (IBAction)beaconDetected:(id)sender {
     [self displayDetailsView];
+    [self scrollToExhibit:@"matisse"];
+}
+
+- (void) scrollToExhibit:(NSString *)exhibitId {
+    if ([exhibitId isEqualToString:@"matisse"]) {
+        CGPoint coords = matisseButton.frame.origin;
+        [self.mapScrollView setContentOffset:coords animated:YES];
+    }
 }
 
 - (void) displayDetailsView {
     
-    // If we alreayd have a detailsVC being displayed, remove it
+    // If we already have a detailsVC being displayed, remove it
     if (self.detailsVC) {
         [self.detailsVC.view removeFromSuperview];
         self.detailsVC = nil;
