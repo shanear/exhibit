@@ -18,6 +18,7 @@
 		495142C618B8710C005A19F3 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 495142C518B8710C005A19F3 /* Security.framework */; };
 		495142C818B87114005A19F3 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 495142C718B87114005A19F3 /* StoreKit.framework */; };
 		495142CB18B87439005A19F3 /* EXBDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 495142CA18B87439005A19F3 /* EXBDetailsViewController.m */; };
+		49E1625B18B95D5400D89760 /* EXBDetailsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E1625A18B95D5400D89760 /* EXBDetailsView.m */; };
 		CCE91C8F18B8348B00721F97 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCE91C8E18B8348B00721F97 /* Foundation.framework */; };
 		CCE91C9118B8348B00721F97 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCE91C9018B8348B00721F97 /* CoreGraphics.framework */; };
 		CCE91C9318B8348B00721F97 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCE91C9218B8348B00721F97 /* UIKit.framework */; };
@@ -64,6 +65,8 @@
 		495142C718B87114005A19F3 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		495142C918B87439005A19F3 /* EXBDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXBDetailsViewController.h; sourceTree = "<group>"; };
 		495142CA18B87439005A19F3 /* EXBDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXBDetailsViewController.m; sourceTree = "<group>"; };
+		49E1625918B95D5400D89760 /* EXBDetailsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXBDetailsView.h; sourceTree = "<group>"; };
+		49E1625A18B95D5400D89760 /* EXBDetailsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXBDetailsView.m; sourceTree = "<group>"; };
 		CCE91C8B18B8348B00721F97 /* Exhibit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Exhibit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCE91C8E18B8348B00721F97 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CCE91C9018B8348B00721F97 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -192,6 +195,8 @@
 				CCE91CD218B846F200721F97 /* EXBExhibitService.m */,
 				CCE91CDA18B914DF00721F97 /* EXBExhibit.h */,
 				CCE91CDB18B914DF00721F97 /* EXBExhibit.m */,
+				49E1625918B95D5400D89760 /* EXBDetailsView.h */,
+				49E1625A18B95D5400D89760 /* EXBDetailsView.m */,
 			);
 			path = Exhibit;
 			sourceTree = "<group>";
@@ -330,6 +335,7 @@
 				CCE91CA518B8348B00721F97 /* EXBViewController.m in Sources */,
 				495142B818B85ED0005A19F3 /* EXBMapViewController.m in Sources */,
 				CCE91CD018B83B0E00721F97 /* EXBBeaconService.m in Sources */,
+				49E1625B18B95D5400D89760 /* EXBDetailsView.m in Sources */,
 				CCE91CDC18B914DF00721F97 /* EXBExhibit.m in Sources */,
 				CCE91C9F18B8348B00721F97 /* EXBAppDelegate.m in Sources */,
 				CCE91C9B18B8348B00721F97 /* main.m in Sources */,

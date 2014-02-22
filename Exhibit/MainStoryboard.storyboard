@@ -16,10 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="legionofhonor" translatesAutoresizingMaskIntoConstraints="NO" id="5qY-0i-0wa">
-                                <rect key="frame" x="-13" y="219" width="347" height="349"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Legion of Honor" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e8j-Es-TGw">
                                 <rect key="frame" x="76" y="529" width="168" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -27,12 +23,12 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" minimumZoomScale="0.20000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="n9D-aC-oOy">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="400"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n9D-aC-oOy">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="floorplan2" translatesAutoresizingMaskIntoConstraints="NO" id="BcC-0I-iaU">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="400"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="legionofhonor_floorplan" translatesAutoresizingMaskIntoConstraints="NO" id="BcC-0I-iaU">
+                                        <rect key="frame" x="100" y="100" width="320" height="568"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="parmigianino_thumb" translatesAutoresizingMaskIntoConstraints="NO" id="YEK-z1-VeT">
@@ -73,7 +69,7 @@
                         <viewControllerLayoutGuide type="top" id="hmq-Bw-rpg"/>
                         <viewControllerLayoutGuide type="bottom" id="FYB-rm-hhR"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="sPU-uw-qss">
+                    <view key="view" contentMode="scaleToFill" id="sPU-uw-qss" customClass="EXBDetailsView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
@@ -121,9 +117,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="floorplan2" width="1980" height="1478"/>
         <image name="impressionist_thumb" width="248" height="248"/>
-        <image name="legionofhonor" width="2233" height="2103"/>
+        <image name="legionofhonor_floorplan" width="572" height="758"/>
         <image name="matisse_thumb" width="216" height="216"/>
         <image name="parmigianino_thumb" width="276" height="276"/>
     </resources>

@@ -64,7 +64,8 @@
 - (void)viewDidLayoutSubviews {
     // Setup scrollView
     self.mapImageView.frame = CGRectMake(0, 0, self.mapImageView.image.size.width, self.mapImageView.image.size.height);
-    self.mapScrollView.contentSize = self.mapImageView.image.size;
+    
+    self.mapScrollView.contentSize = CGSizeMake(self.mapImageView.image.size.width + 200, self.mapImageView.image.size.height + 200);
 }
 
 - (void)didReceiveMemoryWarning
@@ -95,7 +96,7 @@
     CGRect frame = [[UIScreen mainScreen] bounds];
     frame.origin.y += frame.size.height;
     CGRect elevatedFrame = frame;
-    elevatedFrame.origin.y -= 100;
+    elevatedFrame.origin.y -= 200;
     elevatedFrame.size.width -= 20;
     elevatedFrame.origin.x += 10;
     
@@ -103,15 +104,11 @@
     
     [self.view addSubview:detailsView];
     
-    [UIView animateWithDuration:0.5f animations: ^{
+    [UIView animateWithDuration:0.25f animations: ^{
         detailsView.frame = elevatedFrame;
     } completion:^(BOOL finished) {
         CGRect finalFrame = self.detailsVC.view.frame;
         finalFrame.origin.y += 20;
-        
-        [UIView animateWithDuration:0.5f animations: ^{
-            self.detailsVC.view.frame = finalFrame;
-        }];
     }];
 }
 
@@ -127,7 +124,7 @@
     CGRect screenFrame = [[UIScreen mainScreen] bounds];
     CGRect newDetailsFrame = self.detailsVC.view.frame;
     
-    newDetailsFrame.origin.y += (screenFrame.size.height - 100);
+    newDetailsFrame.origin.y += (screenFrame.size.height - 180);
     newDetailsFrame.size.width -= 20;
     newDetailsFrame.origin.x += 10;
     
@@ -159,14 +156,14 @@
 
 # pragma mark - UIScrollViewDelegate
 
-- (UIView *) viewForZoomingInScrollView:(UIScrollView *)scrollView {
-    // return which subview we want to zoom
-    return self.mapImageView;
-}
-
-- (void) scrollViewDidEndZooming:(UIScrollView *)scrollView withView:(UIView *)view atScale:(CGFloat)scale {
-    self.mapScrollView.contentSize = CGSizeMake(self.mapImageView.image.size.width * scale, self.mapImageView.image.size.height * scale);
-}
+//- (UIView *) viewForZoomingInScrollView:(UIScrollView *)scrollView {
+//    // return which subview we want to zoom
+//    return self.mapImageView;
+//}
+//
+//- (void) scrollViewDidEndZooming:(UIScrollView *)scrollView withView:(UIView *)view atScale:(CGFloat)scale {
+//    self.mapScrollView.contentSize = CGSizeMake(self.mapImageView.image.size.width * scale, self.mapImageView.image.size.height * scale);
+//}
 
 
 @end
