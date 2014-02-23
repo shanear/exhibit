@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
 #import "EXBMapViewController.h"
 
-@interface EXBDetailsViewController : UIViewController
+@interface EXBDetailsViewController : UIViewController <MKMapViewDelegate>
+
 @property (weak, nonatomic) IBOutlet UILabel *exhibitName;
 @property (weak, nonatomic) IBOutlet UIImageView *exhibitThumb;
 
