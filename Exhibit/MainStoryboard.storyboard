@@ -139,7 +139,7 @@
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Intimate Impressionism from the National Gallery of Art" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="213" translatesAutoresizingMaskIntoConstraints="NO" id="4Uf-G3-MQQ">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Exhibit Name" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="213" translatesAutoresizingMaskIntoConstraints="NO" id="4Uf-G3-MQQ">
                                         <rect key="frame" x="8" y="28" width="213" height="43"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -195,12 +195,13 @@
                             <constraint firstItem="FYB-rm-hhR" firstAttribute="top" secondItem="FG7-gX-gaY" secondAttribute="bottom" constant="8" id="rht-b4-BxE"/>
                         </constraints>
                         <connections>
-                            <outlet property="exhibitName" destination="4Uf-G3-MQQ" id="LME-UE-mX4"/>
                             <outlet property="exhibitThumb" destination="95o-nE-UVz" id="P2W-9d-1wI"/>
                         </connections>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <connections>
+                        <outlet property="exhibitName" destination="4Uf-G3-MQQ" id="GBP-fc-oAC"/>
+                        <outlet property="exhibitThumb" destination="95o-nE-UVz" id="GE1-sl-heO"/>
                         <outlet property="seeMore" destination="rkc-E1-pto" id="Xxy-A6-eSp"/>
                     </connections>
                 </viewController>

@@ -14,9 +14,9 @@
 {
     self = [super init];
     
-    self.exhibits = @{ @"1337-1" : [[EXBExhibit alloc] initWithId: @"matisse" name: @"Matisse from SFMOMA"],
-                       @"37678-62097" : [[EXBExhibit alloc] initWithId: @"parmigianio" name:@"The Poetry of Parmigianino's \"Schiava Turca\""],
-                       @"1337-3" : [[EXBExhibit alloc] initWithId: @"impressionism" name:@"Intimate Impressionism from the National Gallery of Art"]};
+    self.exhibits = @{ @"37678-62097" : [[EXBExhibit alloc] initWithId: @"matisse" name: @"Matisse from SFMOMA"],
+                       @"1337-2" : [[EXBExhibit alloc] initWithId: @"parmigianino" name:@"The Poetry of Parmigianino's \"Schiava Turca\""],
+                       @"1337-1" : [[EXBExhibit alloc] initWithId: @"impressionist" name:@"Intimate Impressionism from the National Gallery of Art"]};
     
     return self;
 }
