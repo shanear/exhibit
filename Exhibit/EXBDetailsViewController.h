@@ -11,6 +11,7 @@
 
 @interface EXBDetailsViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UILabel *exhibitName;
+@property (weak, nonatomic) IBOutlet UIImageView *exhibitThumb;
 
 @property (nonatomic, strong) EXBMapViewController *mapDelegate;
 

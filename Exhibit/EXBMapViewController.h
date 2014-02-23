@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EXBMapViewController : UIViewController <UIScrollViewDelegate>
+@interface EXBMapViewController : UIViewController
 
 - (void) expandDetailsView;
 - (void) shrinkDetailsView;

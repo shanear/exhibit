@@ -105,6 +105,7 @@
 }
 
 - (IBAction)beaconDetected {
+    [self.exhibitService enteredBeaconId:@"37678-62097"];
     [self displayDetailsView];
     
     [PFCloud callFunctionInBackground:@"visit" withParameters:@{@"phoneID": [[[UIDevice currentDevice] identifierForVendor] UUIDString], @"exhibitID": @"matisse"} block:^(id object, NSError *error) {
@@ -115,21 +116,40 @@
 }
 
 - (void) scrollToExhibit:(NSString *)exhibitId {
+    
+    [matisseButton stopPulsing];
+    [parmigianinoButton stopPulsing];
+    [impressionistButton stopPulsing];
+    
     if ([exhibitId isEqualToString:@"matisse"]) {
         
         
         CGPoint coords = matisseButton.frame.origin;
         coords.x -= ([[UIScreen mainScreen] bounds].size.width / 2) - 22.5;
-        coords.y -= ([[UIScreen mainScreen] bounds].size.height / 2) - 22.5;
+        coords.y -= ([[UIScreen mainScreen] bounds].size.height / 2) - 22.5 - 90;
         
         [self.mapScrollView setContentOffset:coords animated:YES];
-        
-        
-        [matisseButton stopPulsing];
-        [parmigianinoButton stopPulsing];
-        [impressionistButton stopPulsing];
-        
         [matisseButton startPulsing];
+    }
+    
+    if ([exhibitId isEqualToString:@"impressionist"]) {
+        CGPoint coords = impressionistButton.frame.origin;
+        coords.x -= ([[UIScreen mainScreen] bounds].size.width / 2) - 22.5;
+        coords.y -= ([[UIScreen mainScreen] bounds].size.height / 2) - 22.5 - 90;
+        
+        [self.mapScrollView setContentOffset:coords animated:YES];
+        [impressionistButton startPulsing];
+
+    }
+    
+    if ([exhibitId isEqualToString:@"parmigianino"]) {
+        CGPoint coords = parmigianinoButton.frame.origin;
+        coords.x -= ([[UIScreen mainScreen] bounds].size.width / 2) - 22.5;
+        coords.y -= ([[UIScreen mainScreen] bounds].size.height / 2) - 22.5 - 90;
+        
+        [self.mapScrollView setContentOffset:coords animated:YES];
+        [parmigianinoButton startPulsing];
+
     }
 }
 
@@ -162,7 +182,9 @@
     [UIView animateWithDuration:0.25f animations: ^{
         detailsView.frame = elevatedFrame;
     } completion:^(BOOL finished) {
-        if (finished) { [self scrollToExhibit:@"matisse"]; }
+        if (finished) {
+            [self scrollToExhibit:self.exhibitService.currentExhibit.exhibitId];
+        }
     }];
 }
 
@@ -199,7 +221,13 @@
         if(self.exhibitService.currentExhibit) {
             [self displayDetailsView];
             [self.detailsVC.exhibitName setText:self.exhibitService.currentExhibit.name];
+            self.detailsVC.exhibitThumb.image = [UIImage imageNamed:self.exhibitService.currentExhibit.exhibitId];
             
+            [PFCloud callFunctionInBackground:@"visit" withParameters:@{@"phoneID": [[[UIDevice currentDevice] identifierForVendor] UUIDString], @"exhibitID": self.exhibitService.currentExhibit.name} block:^(id object, NSError *error) {
+                if (!error) {
+                    NSLog(@"Visit to matisse logged!");
+                }
+            }];
         }
         else {
             [self shrinkDetailsView];
@@ -209,17 +237,5 @@
         
     }
 }
-
-# pragma mark - UIScrollViewDelegate
-
-//- (UIView *) viewForZoomingInScrollView:(UIScrollView *)scrollView {
-//    // return which subview we want to zoom
-//    return self.mapImageView;
-//}
-//
-//- (void) scrollViewDidEndZooming:(UIScrollView *)scrollView withView:(UIView *)view atScale:(CGFloat)scale {
-//    self.mapScrollView.contentSize = CGSizeMake(self.mapImageView.image.size.width * scale, self.mapImageView.image.size.height * scale);
-//}
-
 
 @end

@@ -155,12 +155,13 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <connections>
-                            <outlet property="exhibitName" destination="4Uf-G3-MQQ" id="LME-UE-mX4"/>
                             <outlet property="exhibitThumb" destination="95o-nE-UVz" id="P2W-9d-1wI"/>
                         </connections>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <connections>
+                        <outlet property="exhibitName" destination="4Uf-G3-MQQ" id="GBP-fc-oAC"/>
+                        <outlet property="exhibitThumb" destination="95o-nE-UVz" id="GE1-sl-heO"/>
                         <outlet property="seeMore" destination="rkc-E1-pto" id="Xxy-A6-eSp"/>
                     </connections>
                 </viewController>
