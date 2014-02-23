@@ -14,6 +14,7 @@
 
 @property (nonatomic) NSString* exhibitId;
 @property (nonatomic) NSString* name;
+@property BOOL visited;
 @property (nonatomic) CGPoint* mapCoords;
 
 @end

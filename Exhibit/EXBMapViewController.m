@@ -26,6 +26,8 @@
 @property BOOL longPressWasDetected;
 @property BOOL setupScrollView;
 
+@property (weak, nonatomic) IBOutlet UILabel *explorePercent;
+
 // Exhibit buttons
 @property (weak, nonatomic) IBOutlet EXBExhibitButton *parmigianinoButton;
 @property (weak, nonatomic) IBOutlet EXBExhibitButton *matisseButton;
@@ -211,6 +213,11 @@
     }];
 }
 
+-(void)updateExplorePercent
+{
+    [self.explorePercent setText:[NSString stringWithFormat:@"%d%% Explored", [self.exhibitService percentVisited]]];
+}
+
 -(void)beaconManager:(ESTBeaconManager *)manager
      didRangeBeacons:(NSArray *)beacons
             inRegion:(ESTBeaconRegion *)region
@@ -222,6 +229,8 @@
             [self displayDetailsView];
             [self.detailsVC.exhibitName setText:self.exhibitService.currentExhibit.name];
             self.detailsVC.exhibitThumb.image = [UIImage imageNamed:self.exhibitService.currentExhibit.exhibitId];
+            
+            [self updateExplorePercent];
             
             [PFCloud callFunctionInBackground:@"visit" withParameters:@{@"phoneID": [[[UIDevice currentDevice] identifierForVendor] UUIDString], @"exhibitID": self.exhibitService.currentExhibit.exhibitId} block:^(id object, NSError *error) {
                 if (!error) {

@@ -17,5 +17,6 @@
 
 -(EXBExhibit*)exhibitForBeaconId:(NSString*)beaconId;
 -(void)enteredBeaconId:(NSString*)beaconId;
+-(NSInteger)percentVisited;
 
 @end

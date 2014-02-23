@@ -17,6 +17,7 @@
     self = [super init];
     self.exhibitId = anId;
     self.name = aName;
+    self.visited = NO;
     return self;
 }
 

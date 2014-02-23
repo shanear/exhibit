@@ -26,12 +26,26 @@
     return [self.exhibits objectForKey:beaconId];
 }
 
+-(NSInteger)percentVisited
+{
+    NSInteger totalVisited = 0;
+    
+    for(EXBExhibit* exhibit in [self.exhibits allValues]) {
+        if(exhibit.visited) {
+            totalVisited += 1;
+        }
+    }
+    
+    return (totalVisited * 1.0 / [[self.exhibits allValues] count]) * 100;
+}
+
 -(void)enteredBeaconId:(NSString *)beaconId
 {
     
     EXBExhibit* newExhibit = [self exhibitForBeaconId:beaconId];
     if(self.currentExhibit != newExhibit) {
         self.currentExhibit = newExhibit;
+        self.currentExhibit.visited = YES;
         self.exhibitChanged = true;
     }
 }
