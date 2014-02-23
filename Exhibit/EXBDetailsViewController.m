@@ -12,6 +12,7 @@
 
 @property BOOL isExpanded;
 @property (weak, nonatomic) IBOutlet UILabel *seeMore;
+@property (weak, nonatomic) IBOutlet MKMapView *map;
 
 @end
 
