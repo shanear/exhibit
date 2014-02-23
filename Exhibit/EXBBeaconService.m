@@ -32,24 +32,24 @@
 -(NSString*)getClosestBeaconId:(NSArray*)beacons
 {
     for(ESTBeacon* beacon in beacons) {
-        if(beacon.rssi > -85) {
+        if(beacon.rssi > -83) {
             if([self.exhibitService exhibitForBeaconId:[self generateBeaconId:beacon]]) {
                 return [self generateBeaconId:beacon];
             }
         }
     }
     
-    return nil;
+    return @"";
 }
 
 -(void)processBeacons:(NSArray*)beacons
 {
-    NSString* closestBeaconId = [self getClosestBeaconId:beacons];;
+    NSString* closestBeaconId = [self getClosestBeaconId:beacons];
 
     if([self.closestBeaconId isEqualToString:closestBeaconId]) {
         self.streak += 1;
         
-        if(self.streak > 3) {
+        if(self.streak > 2) {
             [self.exhibitService enteredBeaconId:self.closestBeaconId];
         }
     }

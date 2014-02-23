@@ -10,6 +10,7 @@
 #import "EXBMapViewController.h"
 
 @interface EXBDetailsViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UILabel *exhibitName;
 
 @property (nonatomic, strong) EXBMapViewController *mapDelegate;
 

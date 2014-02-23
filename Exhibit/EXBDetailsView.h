@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface EXBDetailsView : UIView
+@property (weak, nonatomic) IBOutlet UILabel *exhibitName;
+@property (weak, nonatomic) IBOutlet UIImageView *exhibitThumb;
 
 @end

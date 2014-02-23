@@ -11,7 +11,7 @@
 @interface EXBDetailsViewController ()
 
 @property BOOL isExpanded;
-@property (weak, nonatomic) IBOutlet UIButton *closeButton;
+@property (weak, nonatomic) IBOutlet UILabel *seeMore;
 
 @end
 
@@ -39,18 +39,18 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)expandButtonPressed:(id)sender {
-    if (!self.isExpanded) {
-       [self.mapDelegate expandDetailsView];
-        self.closeButton.hidden = NO;
-        self.isExpanded = YES;
-    }
-}
-
 - (IBAction)closeButtonPressed:(id)sender {
     self.isExpanded = NO;
-    self.closeButton.hidden = YES;
+    self.seeMore.hidden = NO;
     [self.mapDelegate shrinkDetailsView];
+}
+
+- (IBAction)expand:(id)sender {
+    if (!self.isExpanded) {
+        [self.mapDelegate expandDetailsView];
+        self.seeMore.hidden = YES;
+        self.isExpanded = YES;
+    }
 }
 
 @end
