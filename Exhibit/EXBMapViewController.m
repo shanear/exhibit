@@ -106,10 +106,18 @@
 
 - (IBAction)beaconDetected {
     [self displayDetailsView];
+    
+    [PFCloud callFunctionInBackground:@"visit" withParameters:@{@"phoneID": [[[UIDevice currentDevice] identifierForVendor] UUIDString], @"exhibitID": @"matisse"} block:^(id object, NSError *error) {
+        if (!error) {
+            NSLog(@"Visit to matisse logged!");
+        }
+    }];
 }
 
 - (void) scrollToExhibit:(NSString *)exhibitId {
     if ([exhibitId isEqualToString:@"matisse"]) {
+        
+        
         CGPoint coords = matisseButton.frame.origin;
         coords.x -= ([[UIScreen mainScreen] bounds].size.width / 2) - 22.5;
         coords.y -= ([[UIScreen mainScreen] bounds].size.height / 2) - 22.5;

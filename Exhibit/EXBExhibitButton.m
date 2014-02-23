@@ -39,11 +39,13 @@
 
 - (void)startPulsing {
     self.isPulsing = YES;
+    self.layer.borderColor = [UIColor greenColor].CGColor;
     [self pulse];
 }
 
 - (void)stopPulsing {
     self.isPulsing = NO;
+    self.layer.borderColor = [UIColor grayColor].CGColor;
 }
 
 
