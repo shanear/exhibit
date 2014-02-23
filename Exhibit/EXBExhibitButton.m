@@ -10,6 +10,7 @@
 
 @interface EXBExhibitButton ()
 
+@property (nonatomic, strong) UIImageView *checkMark;
 @property BOOL isPulsing;
 
 @end
@@ -30,9 +31,9 @@
     if (self) {
         self.isPulsing = NO;
         self.layer.borderColor = [UIColor grayColor].CGColor;
-        self.layer.borderWidth = 3.0f;
+        self.layer.borderWidth = 4.0f;
         self.layer.masksToBounds = YES;
-        self.layer.cornerRadius = 22.5;
+        self.layer.cornerRadius = 30;
     }
     return self;
 }
@@ -40,6 +41,15 @@
 - (void)startPulsing {
     self.isPulsing = YES;
     self.layer.borderColor = [UIColor greenColor].CGColor;
+    
+    self.checkMark = [[UIImageView alloc] initWithFrame:CGRectMake(15, 15, 30, 30)];
+    [self.checkMark setContentMode:UIViewContentModeScaleAspectFit];
+    self.checkMark.image = [UIImage imageNamed:@"check_mark_green"];
+    //self.checkMark.frame = self.frame;
+    //self.checkMark.backgroundColor = [UIColor greenColor];
+    [self addSubview:self.checkMark];
+    
+    
     [self pulse];
 }
 
@@ -64,41 +74,6 @@
 
 - (void)expandButtonWithMessage:(NSString *)message {
     
-//    CABasicAnimation* ba = [CABasicAnimation animationWithKeyPath:@"transform"];
-//    ba.autoreverses = YES;
-//    ba.duration = 0.3;
-//    ba.toValue = [NSValue valueWithCATransform3D:CATransform3DMakeScale(1.2, 1.2, 1)];
-//    [self.layer addAnimation:ba forKey:nil];
-    
-    //CGRect expandedFrame = self.frame;
-    //expandedFrame.origin.x -= 20; //11.25;
-    //expandedFrame.origin.y -= 20; //11.25;
-    
-//    
-//    self.frame = expandedFrame;
-    
-    //self.translatesAutoresizingMaskIntoConstraints = YES;
-    
-//    [UIView animateWithDuration:0.5
-//                          delay:0
-//                        options:0
-//                     animations:^{
-//                         //NSLog(@"Before center: %@", NSStringFromCGPoint(self.icon.center));
-//                         
-//                         self.frame = expandedFrame;
-//                         CGAffineTransform transform = self.transform;
-//                         self.transform = CGAffineTransformScale(transform, 1.5, 1.5);
-//                         
-//                         
-//                         
-//                         //NSLog(@"After center: %@", NSStringFromCGPoint(self.icon.center));
-//                     }
-//                     completion:^(BOOL finished){
-//                         // nothing
-//                         //NSLog(@"Completion center: %@", NSStringFromCGPoint(self.icon.center));
-//                         
-//                     }];
-//    
 }
 
 /*
