@@ -232,6 +232,10 @@
             [self displayDetailsView];
             [self.detailsVC.exhibitName setText:self.exhibitService.currentExhibit.name];
             self.detailsVC.exhibitThumb.image = [UIImage imageNamed:self.exhibitService.currentExhibit.exhibitId];
+            //coordinate.latitude = 50.11;
+            //coordinate.longitude = 3.55;
+            
+            //[self.detailsVC zoomToLocationWithCoords:CLLocationCoordinate2DMake(50.11, 3.55)];
             
             [self updateExplorePercent];
             

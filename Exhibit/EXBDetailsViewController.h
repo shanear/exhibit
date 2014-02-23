@@ -17,4 +17,6 @@
 
 @property (nonatomic, strong) EXBMapViewController *mapDelegate;
 
+-(void)zoomToLocationWithCoords:(CLLocationCoordinate2D)coords;
+
 @end

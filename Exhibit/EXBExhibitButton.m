@@ -45,8 +45,6 @@
     self.checkMark = [[UIImageView alloc] initWithFrame:CGRectMake(15, 15, 30, 30)];
     [self.checkMark setContentMode:UIViewContentModeScaleAspectFit];
     self.checkMark.image = [UIImage imageNamed:@"check_mark_green"];
-    //self.checkMark.frame = self.frame;
-    //self.checkMark.backgroundColor = [UIColor greenColor];
     [self addSubview:self.checkMark];
     
     

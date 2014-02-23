@@ -32,12 +32,25 @@
     [super viewDidLoad];
 	
     self.isExpanded = NO;
+    [self zoomToLocationWithCoords:CLLocationCoordinate2DMake(50.11, 3.55)];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)zoomToLocationWithCoords:(CLLocationCoordinate2D)coords;
+{
+    //CLLocationCoordinate2D coordinate;
+    //coordinate.latitude = coords[0];
+    
+    //coordinate.latitude = 50.11;
+    //coordinate.longitude = 3.55;
+    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(coords, 500, 500);
+    MKCoordinateRegion adjustedRegion = [self.map regionThatFits:viewRegion];
+    [self.map setRegion:adjustedRegion animated:YES];
 }
 
 - (IBAction)closeButtonPressed:(id)sender {
