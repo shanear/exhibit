@@ -5,34 +5,34 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>CA4734F6-101C-4D79-934C-6BF5315EC74D</string>
+	<string>A0485EC1-FCAA-4330-8806-3FE505471AD7</string>
 	<key>IDESourceControlProjectName</key>
 	<string>Exhibit</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>4CB7FEDA-0281-4084-A9EA-772C84899C41</key>
-		<string>https://github.com/shanear/exhibit.git</string>
+		<key>F8FB2200-AE16-4D88-BD3C-A62AD08A40F9</key>
+		<string>ssh://github-afincha/shanear/exhibit.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Exhibit.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>4CB7FEDA-0281-4084-A9EA-772C84899C41</key>
+		<key>F8FB2200-AE16-4D88-BD3C-A62AD08A40F9</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/shanear/exhibit.git</string>
+	<string>ssh://github-afincha/shanear/exhibit.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>4CB7FEDA-0281-4084-A9EA-772C84899C41</string>
+	<string>F8FB2200-AE16-4D88-BD3C-A62AD08A40F9</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>4CB7FEDA-0281-4084-A9EA-772C84899C41</string>
+			<string>F8FB2200-AE16-4D88-BD3C-A62AD08A40F9</string>
 			<key>IDESourceControlWCCName</key>
 			<string>exhibit</string>
 		</dict>
