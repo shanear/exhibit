@@ -116,6 +116,11 @@
         
         [self.mapScrollView setContentOffset:coords animated:YES];
         
+        
+        [matisseButton stopPulsing];
+        [parmigianinoButton stopPulsing];
+        [impressionistButton stopPulsing];
+        
         [matisseButton startPulsing];
     }
 }

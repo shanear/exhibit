@@ -50,7 +50,7 @@
 - (void) pulse {
     CABasicAnimation* ba = [CABasicAnimation animationWithKeyPath:@"transform"];
     ba.autoreverses = YES;
-    ba.duration = 1.8;
+    ba.duration = .6;
     ba.delegate = self;
     ba.toValue = [NSValue valueWithCATransform3D:CATransform3DMakeScale(1.2, 1.2, 1)];
     [self.layer addAnimation:ba forKey:nil];
