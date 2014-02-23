@@ -174,6 +174,8 @@
     if(self.exhibitService.exhibitChanged) {
         if(self.exhibitService.currentExhibit) {
             [self displayDetailsView];
+            [self.detailsVC.exhibitName setText:self.exhibitService.currentExhibit.name];
+            
         }
         else {
             [self shrinkDetailsView];
