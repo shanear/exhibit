@@ -223,7 +223,7 @@
             [self.detailsVC.exhibitName setText:self.exhibitService.currentExhibit.name];
             self.detailsVC.exhibitThumb.image = [UIImage imageNamed:self.exhibitService.currentExhibit.exhibitId];
             
-            [PFCloud callFunctionInBackground:@"visit" withParameters:@{@"phoneID": [[[UIDevice currentDevice] identifierForVendor] UUIDString], @"exhibitID": self.exhibitService.currentExhibit.name} block:^(id object, NSError *error) {
+            [PFCloud callFunctionInBackground:@"visit" withParameters:@{@"phoneID": [[[UIDevice currentDevice] identifierForVendor] UUIDString], @"exhibitID": self.exhibitService.currentExhibit.exhibitId} block:^(id object, NSError *error) {
                 if (!error) {
                     NSLog(@"Visit to matisse logged!");
                 }
