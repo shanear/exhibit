@@ -78,6 +78,9 @@
     self.mapImageView.frame = CGRectMake(100, 100, self.mapImageView.image.size.width, self.mapImageView.image.size.height);
     
     self.mapScrollView.contentSize = CGSizeMake(self.mapImageView.image.size.width + 200, self.mapImageView.image.size.height + 200);
+    
+    CGPoint initialCoords = CGPointMake(226,300);
+    [self.mapScrollView setContentOffset:initialCoords animated:YES];
 }
 
 
