@@ -26,6 +26,10 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n9D-aC-oOy">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <userGuides>
+                                    <userLayoutGuide location="167" affinity="minX"/>
+                                    <userLayoutGuide location="252" affinity="minY"/>
+                                </userGuides>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="legionofhonor_floorplan" translatesAutoresizingMaskIntoConstraints="NO" id="BcC-0I-iaU">
                                         <rect key="frame" x="100" y="100" width="320" height="568"/>
@@ -38,6 +42,9 @@
                                         <state key="normal" image="matisse_thumb">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="matisseButtonPressed:" destination="cTV-hl-WWH" eventType="touchUpInside" id="9iH-97-M0k"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ft1-wm-qPo" customClass="EXBExhibitButton">
                                         <rect key="frame" x="146" y="228" width="45" height="45"/>
@@ -46,6 +53,9 @@
                                         <state key="normal" image="parmigianino_thumb">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="parmigianinoButtonPressed:" destination="cTV-hl-WWH" eventType="touchUpInside" id="lnh-jK-mph"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UVG-JF-dBu" customClass="EXBExhibitButton">
                                         <rect key="frame" x="146" y="512" width="45" height="45"/>
@@ -54,6 +64,9 @@
                                         <state key="normal" image="impressionist_thumb">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="impressionistButtonPressed:" destination="cTV-hl-WWH" eventType="touchUpInside" id="WHM-Je-TAP"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <connections>

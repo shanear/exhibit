@@ -10,4 +10,9 @@
 
 @interface EXBExhibitButton : UIButton
 
+- (void)expandButtonWithMessage:(NSString *)message;
+
+- (void)startPulsing;
+- (void)stopPulsing;
+
 @end

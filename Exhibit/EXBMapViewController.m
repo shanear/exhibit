@@ -84,6 +84,18 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (IBAction)impressionistButtonPressed:(id)sender {
+    [(EXBExhibitButton *)sender expandButtonWithMessage:@"Impressionism"];
+}
+
+- (IBAction)parmigianinoButtonPressed:(id)sender {
+    [(EXBExhibitButton *)sender expandButtonWithMessage:@"Parmigianino"];
+}
+
+- (IBAction)matisseButtonPressed:(id)sender {
+    [(EXBExhibitButton *)sender expandButtonWithMessage:@"Matisse"];
+}
+
 
 - (void) longPressDetected {
     if (!self.longPressWasDetected) {
@@ -103,6 +115,8 @@
         coords.y -= ([[UIScreen mainScreen] bounds].size.height / 2) - 22.5;
         
         [self.mapScrollView setContentOffset:coords animated:YES];
+        
+        [matisseButton startPulsing];
     }
 }
 
@@ -135,10 +149,7 @@
     [UIView animateWithDuration:0.25f animations: ^{
         detailsView.frame = elevatedFrame;
     } completion:^(BOOL finished) {
-        //CGRect finalFrame = self.detailsVC.view.frame;
-        //finalFrame.origin.y += 20;
-        
-        [self scrollToExhibit:@"matisse"];
+        if (finished) { [self scrollToExhibit:@"matisse"]; }
     }];
 }
 
