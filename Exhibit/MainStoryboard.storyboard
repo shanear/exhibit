@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="cTV-hl-WWH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="cTV-hl-WWH">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
@@ -8,22 +8,18 @@
         <scene sceneID="h06-pP-cwQ">
             <objects>
                 <viewController storyboardIdentifier="EXBMapViewController" id="cTV-hl-WWH" customClass="EXBMapViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="TF8-HW-7Bq"/>
-                        <viewControllerLayoutGuide type="bottom" id="Kgq-Uy-18l"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Aqc-8C-18a">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Legion of Honor" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e8j-Es-TGw">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Legion of Honor" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="e8j-Es-TGw">
                                 <rect key="frame" x="76" y="529" width="168" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n9D-aC-oOy">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" id="n9D-aC-oOy">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <userGuides>
@@ -31,11 +27,11 @@
                                     <userLayoutGuide location="252" affinity="minY"/>
                                 </userGuides>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="legionofhonor_floorplan" translatesAutoresizingMaskIntoConstraints="NO" id="BcC-0I-iaU">
-                                        <rect key="frame" x="99" y="100" width="320" height="568"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="legionofhonor_floorplan" id="BcC-0I-iaU">
+                                        <rect key="frame" x="100" y="100" width="320" height="568"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2av-9Q-vdb" customClass="EXBExhibitButton">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="2av-9Q-vdb" customClass="EXBExhibitButton">
                                         <rect key="frame" x="509" y="370" width="45" height="45"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -46,7 +42,7 @@
                                             <action selector="matisseButtonPressed:" destination="cTV-hl-WWH" eventType="touchUpInside" id="9iH-97-M0k"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ft1-wm-qPo" customClass="EXBExhibitButton">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Ft1-wm-qPo" customClass="EXBExhibitButton">
                                         <rect key="frame" x="146" y="228" width="45" height="45"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -57,7 +53,7 @@
                                             <action selector="parmigianinoButtonPressed:" destination="cTV-hl-WWH" eventType="touchUpInside" id="lnh-jK-mph"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UVG-JF-dBu" customClass="EXBExhibitButton">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="UVG-JF-dBu" customClass="EXBExhibitButton">
                                         <rect key="frame" x="146" y="512" width="45" height="45"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -93,53 +89,41 @@
         <scene sceneID="D0F-3d-8rh">
             <objects>
                 <viewController storyboardIdentifier="EXBDetailsViewController" id="qhR-1r-CrE" customClass="EXBDetailsViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="hmq-Bw-rpg"/>
-                        <viewControllerLayoutGuide type="bottom" id="FYB-rm-hhR"/>
-                    </layoutGuides>
                     <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="sPU-uw-qss" customClass="EXBDetailsView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" text="This celebration of fleeting moments and personal places also highlights some of the Impressionists’ most iconic subjects" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HRz-uO-g1v">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="This celebration of fleeting moments and personal places also highlights some of the Impressionists’ most iconic subjects" selectable="NO" id="HRz-uO-g1v">
                                 <rect key="frame" x="30" y="87" width="260" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="288" id="6oX-UN-E9g"/>
-                                    <constraint firstAttribute="height" constant="65" id="GHw-Mh-7Fy"/>
-                                </constraints>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="See More" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rkc-E1-pto">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="See More" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rkc-E1-pto">
                                 <rect key="frame" x="129" y="150" width="62" height="19"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qG1-mg-cgs">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" id="qG1-mg-cgs">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="77"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="impressionist" translatesAutoresizingMaskIntoConstraints="NO" id="95o-nE-UVz">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="impressionist" id="95o-nE-UVz">
                                         <rect key="frame" x="229" y="-19" width="116" height="116"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="116" id="Ije-BS-iH3"/>
-                                            <constraint firstAttribute="width" constant="116" id="rAD-fi-HW8"/>
-                                        </constraints>
                                     </imageView>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You're in" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PSs-VC-7dC">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You're in" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PSs-VC-7dC">
                                         <rect key="frame" x="8" y="6" width="222" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Intimate Impressionism from the National Gallery of Art" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="213" translatesAutoresizingMaskIntoConstraints="NO" id="4Uf-G3-MQQ">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Intimate Impressionism from the National Gallery of Art" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4Uf-G3-MQQ">
                                         <rect key="frame" x="8" y="28" width="213" height="43"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -147,18 +131,10 @@
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.86717959629999997" green="1" blue="0.8628947455" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstItem="95o-nE-UVz" firstAttribute="leading" secondItem="4Uf-G3-MQQ" secondAttribute="trailing" constant="8" id="JGd-6G-DeS"/>
-                                    <constraint firstItem="95o-nE-UVz" firstAttribute="top" secondItem="qG1-mg-cgs" secondAttribute="top" constant="-19" id="XkG-cd-HXh"/>
-                                    <constraint firstAttribute="height" constant="77" id="hYN-QP-h8w"/>
-                                </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vyM-78-MVm">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="vyM-78-MVm">
                                 <rect key="frame" x="0.0" y="-1" width="320" height="185"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="185" id="RHO-a7-e61"/>
-                                </constraints>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -166,7 +142,7 @@
                                     <action selector="expand:" destination="qhR-1r-CrE" eventType="touchUpInside" id="rCh-3G-aNi"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FG7-gX-gaY">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="FG7-gX-gaY">
                                 <rect key="frame" x="137" y="530" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Close">
@@ -178,22 +154,6 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="qG1-mg-cgs" firstAttribute="top" secondItem="hmq-Bw-rpg" secondAttribute="bottom" id="0Fw-AT-ja2"/>
-                            <constraint firstAttribute="centerX" secondItem="HRz-uO-g1v" secondAttribute="centerX" id="6h2-CQ-DX6"/>
-                            <constraint firstAttribute="trailing" secondItem="qG1-mg-cgs" secondAttribute="trailing" id="8ls-qh-6b7"/>
-                            <constraint firstItem="vyM-78-MVm" firstAttribute="top" secondItem="hmq-Bw-rpg" secondAttribute="bottom" id="98J-w5-VKJ"/>
-                            <constraint firstItem="qG1-mg-cgs" firstAttribute="leading" secondItem="sPU-uw-qss" secondAttribute="leading" id="AHf-af-8S3"/>
-                            <constraint firstAttribute="trailing" secondItem="vyM-78-MVm" secondAttribute="trailing" id="Bcg-8q-Q62"/>
-                            <constraint firstAttribute="centerX" secondItem="FG7-gX-gaY" secondAttribute="centerX" id="KlY-1G-LoK"/>
-                            <constraint firstItem="vyM-78-MVm" firstAttribute="leading" secondItem="sPU-uw-qss" secondAttribute="leading" id="NLf-93-Umh"/>
-                            <constraint firstAttribute="trailing" secondItem="vyM-78-MVm" secondAttribute="trailing" id="RaX-o4-gCQ"/>
-                            <constraint firstAttribute="centerX" secondItem="rkc-E1-pto" secondAttribute="centerX" id="WE7-Pg-maN"/>
-                            <constraint firstItem="vyM-78-MVm" firstAttribute="top" secondItem="hmq-Bw-rpg" secondAttribute="bottom" id="WdR-eP-0Cr"/>
-                            <constraint firstItem="HRz-uO-g1v" firstAttribute="top" secondItem="qG1-mg-cgs" secondAttribute="bottom" constant="8" id="k7D-ET-xVI"/>
-                            <constraint firstItem="vyM-78-MVm" firstAttribute="leading" secondItem="sPU-uw-qss" secondAttribute="leading" id="lfI-m5-Die"/>
-                            <constraint firstItem="FYB-rm-hhR" firstAttribute="top" secondItem="FG7-gX-gaY" secondAttribute="bottom" constant="8" id="rht-b4-BxE"/>
-                        </constraints>
                         <connections>
                             <outlet property="exhibitName" destination="4Uf-G3-MQQ" id="LME-UE-mX4"/>
                             <outlet property="exhibitThumb" destination="95o-nE-UVz" id="P2W-9d-1wI"/>

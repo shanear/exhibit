@@ -24,6 +24,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *mapImageView;
 @property (nonatomic, strong) NSDictionary *exhibitData;
 @property BOOL longPressWasDetected;
+@property BOOL setupScrollView;
 
 // Exhibit buttons
 @property (weak, nonatomic) IBOutlet EXBExhibitButton *parmigianinoButton;
@@ -51,6 +52,7 @@
     [super viewDidLoad];
     
     self.longPressWasDetected = NO;
+    self.setupScrollView = NO;
 
     self.beaconManager = [[ESTBeaconManager alloc] init];
     self.beaconManager.delegate = self;
@@ -71,13 +73,11 @@
     [longPressRecognizer setNumberOfTouchesRequired:2];
     [self.view addGestureRecognizer:longPressRecognizer];
     
-    self.mapImageView.frame = CGRectMake(0, 0, self.mapImageView.image.size.width, self.mapImageView.image.size.height);
-}
-
-- (void)viewDidLayoutSubviews {
-    // Setup scrollView
+    self.mapImageView.frame = CGRectMake(100, 100, self.mapImageView.image.size.width, self.mapImageView.image.size.height);
+    
     self.mapScrollView.contentSize = CGSizeMake(self.mapImageView.image.size.width + 200, self.mapImageView.image.size.height + 200);
 }
+
 
 - (void)didReceiveMemoryWarning
 {
